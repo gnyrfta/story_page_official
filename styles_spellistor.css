@@ -27,7 +27,7 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    visibility: hidden;
+   /*visibility: hidden;-->*/
 }
 
 #playerAndContent {

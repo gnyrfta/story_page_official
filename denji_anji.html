@@ -1,0 +1,455 @@
+<!DOCTYPE HTML>
+<html lang="sv">
+
+<head>
+  <title>Nattsagor för barn och vuxna</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles_spellistor.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+  <script>
+      /*Make linking of divs possible.*/
+
+    // selector = document.querySelector(window.location.hash)
+    // selector.style.display = 'block'
+    // selector.style.opacity = 1
+    // selector.style.visibility = 'visible'
+    /* Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon */
+   
+    /*.-~-.-~-.-~.-~-.-~-.-~.-~-.-~-.-~.-~-.-~-.-~.-~-.-~-.-~.-~-.-~-.-~.-~-.-~-.-~.-~-.-~-.-~.-~-.-~-.-~.-~-.-~-.-~.-~-.-~-.-~.-~-.-~-.-~*/
+    /*Initializations of constants - maybe change these to constants:*/
+    /*.-~-.-~-.-~.-~-.-~-.-~.-~-.-~-.-~.-~-.-~-.-~.-~-.-~-.-~.-~-.-~-.-~.-~-.-~-.-~.-~-.-~-.-~.-~-.-~-.-~.-~-.-~-.-~.-~-.-~-.-~.-~-.-~-.-~*/
+    let storyTitles = [
+      "Sagan om Denji och Anji och ringarna",
+      "Sagan om en blåsig dag i ett land utan cirklar",
+      "Sagan om Frygold och Frygla på Island",
+      "Berättelsebollar",
+      "Frygolds och Fryglas resa",
+      "En gång i tiden i New York",
+      "Gnyrfta",
+      "Fyra vänners resa genom tid och rum"
+    ];
+    //"Denji och Anji och ringarna."
+    /*_.~"~._.~"~._.~"~._.~"~.__.~"~._.~"~._.~"~._.~"~.__.~"~._.~"~._.~"~._.~"~.__.~"~._.~"~._.~"~._.~"~.__.~"~._.~"~._.~"~._.~"~.__.~"~._.~"~._.~"~._.~"~._*/
+    let episodeTitles1 = [
+      "Under en gata i Toronto",
+      "Man är vad maneter?",
+      "Segelbåtspojken och ponnyflickan",
+      "Toyookas Ringar",
+      "Den stålgråögde rånaren på ROM",
+      "En allergisk reaktion",
+      "Underjorden",
+      "Prövningar",
+      "Aqua, vi bor i ett akvarium!" 
+    ];
+
+    let playlist1 = [
+      "https://gnyrftacode.se/del_1_pa_svenska.mp3",
+      "https://gnyrftacode.se/del_2_pa_svenska.mp3",
+      "https://gnyrftacode.se/del_3_pa_svenska.mp3",
+      "https://gnyrftacode.se/del_4_pa_svenska.mp3",
+      "https://www.gnyrftacode.se/del_5_pa_svenska.mp3",
+      "https://www.gnyrftacode.se/del_6_pa_svenska.mp3",
+      "https://gnyrftacode.se/del_7_pa_svenska.mp3",
+      "https://gnyrftacode.se/del_8_pa_svenska.mp3",
+      "https://gnyrftacode.se/del_9_pa_svenska.mp3"
+    ];
+
+    let episodeDescriptions1 = [
+      "<i> Här börjar berättelsen om tre ringar, två barn och en kula. </i>",
+      "<i>Del 2 - i vilken det blir fredag!</i>",
+      "<i>Del 3 - I vilket Segelbåtspojken och Ponnyflickan ger sig ut på sina första äventyr tillsammans.</i>",
+      "<i>Del 4 - I vilket Frygluf berättar medans de sitter uppe i trädtoppen.</i> Det var litet hostigt och jag pratade kanske litet tyst för jag var rädd att väcka folk. ",
+      "<i> Del 5 - I vilket våra hjältar blir tre, med en smygande fyra i Frygluf. </i>",
+      "<i>Del 6</i>",
+      "<i> I vilken Denji, Anji, Evangie och Frygold försöker ta sig ner i underjorden. </i>",
+      "<i> I vilket de fyra vännerna vaknar upp hos Bluebird och får påbörja prövningarna de måste genomgå för att kunna lämna ringarna. </i>",
+      "<i> I vilket Denji, Anji och Evangie får sin tredje och sista prövning för att se ifall de klarar av att lämna ifrån sig ringarna. Som du kanske minns slutade förra avsnittet med att de fyra vännerna ramlade i vattnet… </i>"];
+
+    /*_.~"~._.~"~._.~"~._.~"~.__.~"~._.~"~._.~"~._.~"~.__.~"~._.~"~._.~"~._.~"~.__.~"~._.~"~._.~"~._.~"~.__.~"~._.~"~._.~"~._.~"~.__.~"~._.~"~._.~"~._.~"~._*/
+
+    //En blåsig dag i ett land utan cirklar: 
+    /*_.~"~._.~"~._.~"~._.~"~.__.~"~._.~"~._.~"~._.~"~.__.~"~._.~"~._.~"~._.~"~.__.~"~._.~"~._.~"~._.~"~.__.~"~._.~"~._.~"~._.~"~.__.~"~._.~"~._.~"~._.~"~._*/
+
+    let episodeTitles2 = [
+      "Sagan om en blåsig dag i ett land utan cirklar",
+      "Del 2 i sagan om en blåsig dag i ett land utan cirklar",
+      "Del 3 i sagan om en blåsig dag i ett land utan cirklar",
+      "Del 4 i sagan om en dag i ett land med en hel del cirklar"];
+
+    let playlist2 = [
+      "https://www.gnyrftacode.se/the_tophat.mp3",
+      "https://www.gnyrftacode.se/ander_brander2.mp3",
+      "https://www.gnyrftacode.se/saga_ander_brander_angelina_del_3.mp3",
+      "https://www.gnyrftacode.se/ander_brander_angelina_del4.mp3"];
+
+    let episodeDescriptions2 = [
+      "Hoppsan, inser nu att den här är på engelska! Försöker skicka en saga nästa vecka på svenska… ",
+      "Denna gång på svenska, efter flera försök! ",
+      "Del 3",
+      "Del 4"];
+    /*_.~"~._.~"~._.~"~._.~"~.__.~"~._.~"~._.~"~._.~"~.__.~"~._.~"~._.~"~._.~"~.__.~"~._.~"~._.~"~._.~"~.__.~"~._.~"~._.~"~._.~"~.__.~"~._.~"~._.~"~._.~"~._*/
+
+    //Sagan om Frygold och Frygla på Island: 
+    /*_.~"~._.~"~._.~"~._.~"~.__.~"~._.~"~._.~"~._.~"~.__.~"~._.~"~._.~"~._.~"~.__.~"~._.~"~._.~"~._.~"~.__.~"~._.~"~._.~"~._.~"~.__.~"~._.~"~._.~"~._.~"~._*/
+    let episodeTitles3 = [
+      "Frygold och Frygla på Island, del 1",
+      "Frygold och Frygla på Island, del 2",
+      "Sagan om hur Frygold och Frygla tog sig från Island"];
+
+    let playlist3 = [
+      "https://www.gnyrftacode.se/Fryglor_on_Iceland_1.mp3",
+      "https://www.gnyrftacode.se/Fryglor_on_Iceland_2.mp3",
+      "https://www.gnyrftacode.se/fryglor_pa_flykt.mp3"];
+
+    let episodeDescriptions3 = [
+      "This story is in English.",
+      "This story is in English.",
+      "Denna berättelse tar sin början dagen efter en helmunter fest i Akureyri. "];
+    /*_.~"~._.~"~._.~"~._.~"~.__.~"~._.~"~._.~"~._.~"~.__.~"~._.~"~._.~"~._.~"~.__.~"~._.~"~._.~"~._.~"~.__.~"~._.~"~._.~"~._.~"~.__.~"~._.~"~._.~"~._.~"~._*/
+
+
+    //Berättelsebollar
+    /*_.~"~._.~"~._.~"~._.~"~.__.~"~._.~"~._.~"~._.~"~.__.~"~._.~"~._.~"~._.~"~.__.~"~._.~"~._.~"~._.~"~.__.~"~._.~"~._.~"~._.~"~.__.~"~._.~"~._.~"~._.~"~._*/
+    let episodeTitles4 = [
+      "The first storycube",
+      "Den andra berättelsebollen",
+      "Den tredje berättelsebollen, del 1",
+      "Den tredje berättelsebollen, del 2"];
+
+    let playlist4 = [
+      "https://www.gnyrftacode.se/story_cube_1.mp3",
+      "https://www.gnyrftacode.se/berattelseboll2.mp3",
+      "https://www.gnyrftacode.se/berattelseboll3_del1.mp3",
+      "https://www.gnyrftacode.se/berattelseboll3_del2.mp3"];
+
+    let episodeDescriptions4 = [
+      "<i>The first storycube</i> that actually is a ball, so it should maybe be called 'Den första berättelsebollen'… ",
+      "<i>Den här berättelsen kan jag inte ta credit för helt själv - världen den utspelar sig i hörde jag talas om från min vän Peter, som besökte den när hans tankar vandrade.</i>",
+      "<i>I vilken snöstormen fortsätter och den gröna flickan Fi hittar en boll.</i>",
+      "<i>Det kan vara så att det är nu Fi hittar bollen...</i>"];
+    /*_.~"~._.~"~._.~"~._.~"~.__.~"~._.~"~._.~"~._.~"~.__.~"~._.~"~._.~"~._.~"~.__.~"~._.~"~._.~"~._.~"~.__.~"~._.~"~._.~"~._.~"~.__.~"~._.~"~._.~"~._.~"~._*/
+
+    //Frygolds och Fryglas resa
+    /*_.~"~._.~"~._.~"~._.~"~.__.~"~._.~"~._.~"~._.~"~.__.~"~._.~"~._.~"~._.~"~.__.~"~._.~"~._.~"~._.~"~.__.~"~._.~"~._.~"~._.~"~.__.~"~._.~"~._.~"~._.~"~._*/
+    var episodeTitles5 = [
+      "Frygolds resa",
+      "Fryglas resa",
+      "Frygold och Fryglas resa - Hem"];
+
+    var playlist5 = [
+      "https://www.gnyrftacode.se/frygolds_resa.mp3",
+      "https://www.gnyrftacode.se/fryglas_resa.mp3",
+      "https://www.gnyrftacode.se/hem.mp3"];
+
+    let episodeDescriptions5 = [
+      "Frygold och ett träd reser bestämt dit näsan pekar. Berättad av morfar Bo, som träffade Frygold några månader senare, vid en fontän i en park. ",
+      "<i>I vilken vi ser hur det går borta i San Remo. </i>",
+      ""];
+    /*_.~"~._.~"~._.~"~._.~"~.__.~"~._.~"~._.~"~._.~"~.__.~"~._.~"~._.~"~._.~"~.__.~"~._.~"~._.~"~._.~"~.__.~"~._.~"~._.~"~._.~"~.__.~"~._.~"~._.~"~._.~"~._*/
+
+    //En gång i tiden i New York: 
+    /*_.~"~._.~"~._.~"~._.~"~.__.~"~._.~"~._.~"~._.~"~.__.~"~._.~"~._.~"~._.~"~.__.~"~._.~"~._.~"~._.~"~.__.~"~._.~"~._.~"~._.~"~.__.~"~._.~"~._.~"~._.~"~._*/
+    var episodeTitles6 = [
+      "En gång i tiden i New York - en Bro",
+      "En gång i tiden i New York - en ny Vän",
+      "En gång i tiden i New York - Mot helt oanade höjder",
+      "En gång i tiden i New York - Tillbaka på marken"];
+
+    var playlist6 = [
+      "https://www.gnyrftacode.se/bron_del_1_svenska.mp3",
+      "https://www.gnyrftacode.se/bron_del_2_svenska.mp3",
+      "https://www.gnyrftacode.se/bron_del_3_svenska.mp3",
+      "https://www.gnyrftacode.se/bron_del_4_svenska.mp3"];
+
+    let episodeDescriptions6 = [
+      "Del 1",
+      "Del 2 - I vilken vi återvänder till ugglan, som väntar på att Jan ska vakna. ",
+      "Del 3",
+      "Del 4"];
+    /*_.~"~._.~"~._.~"~._.~"~.__.~"~._.~"~._.~"~._.~"~.__.~"~._.~"~._.~"~._.~"~.__.~"~._.~"~._.~"~._.~"~.__.~"~._.~"~._.~"~._.~"~.__.~"~._.~"~._.~"~._.~"~._*/
+    //Gnyrfta: 
+    /*_.~"~._.~"~._.~"~._.~"~.__.~"~._.~"~._.~"~._.~"~.__.~"~._.~"~._.~"~._.~"~.__.~"~._.~"~._.~"~._.~"~.__.~"~._.~"~._.~"~._.~"~.__.~"~._.~"~._.~"~._.~"~._*/
+    var episodeTitles7 = [
+      "En gång (eller snarare en borttappad stig) för länge sen i norra Norge",
+      "Gnorft berättar grejer",
+      "George",
+      "Norrut",
+      "Icosahedran",
+      "Vinter"];
+
+    var playlist7 =
+      ["https://www.gnyrftacode.se/gnyrftasaga1.mp3",
+        "https://www.gnyrftacode.se/gnyrftasaga_svenska_2.mp3",
+        "https://www.gnyrftacode.se/gnyrftasaga_3.mp3",
+        "https://www.gnyrftacode.se/gnyrftasaga_svenska_4.mp3",
+        "https://www.gnyrftacode.se/gnyrftasaga5.mp3",
+        "https://www.gnyrftacode.se/gnyrftasaga6.mp3"];
+
+    let episodeDescriptions7 = [
+      "I vilken Oncle Enya berättar om en sommar för länge sedan",
+      "I vilken vi fortsätter där vi slutade - djupt ner i jorden",
+      "Vi börjar där vi slutade förra gången - Enya och Gona och de siamesiska gnyrftorna Omid och Gomid vandrar norrut. ",
+      " Vi börjar återigen där vi slutade förra gången. ",
+      " Nånstans i berättelsen säger nån att en icosahedra har 12 sidor, det stämmer inte - det är 20 sidor! ",
+      ""
+    ];
+    /*_.~"~._.~"~._.~"~._.~"~.__.~"~._.~"~._.~"~._.~"~.__.~"~._.~"~._.~"~._.~"~.__.~"~._.~"~._.~"~._.~"~.__.~"~._.~"~._.~"~._.~"~.__.~"~._.~"~._.~"~._.~"~._*/
+
+    //Fyra vänners resa genom tid och rum: 
+    /*_.~"~._.~"~._.~"~._.~"~.__.~"~._.~"~._.~"~._.~"~.__.~"~._.~"~._.~"~._.~"~.__.~"~._.~"~._.~"~._.~"~.__.~"~._.~"~._.~"~._.~"~.__.~"~._.~"~._.~"~._.~"~._*/
+    var episodeTitles8 = [
+      "En matta, en flicka och tre möss varav två inte är möss och minst en är en sköldpadda",
+      "Limbus Molestum Bastardis",
+      "Drogomeda",
+      "Frusen tid"
+  ]
+
+    var playlist8 = [
+      "https://www.gnyrftacode.se/en_matta.mp3",
+      "https://www.gnyrftacode.se/en_matta_2.mp3",
+      "https://www.gnyrftacode.se/en_matta_3.mp3",
+      "https://www.gnyrftacode.se/en_matta_4.mp3"
+      ];
+
+    let episodeDescriptions8 = [
+      "<i>Del 1 - I vilken Akisha smiter iväg och lånar några kringlor.</i><br><br><a href='https://youtu.be/Q9gXWmUiqNs'>YouTube</a><br><br>"+
+      "Art by <div class='artLink' id='sig'>Alex P Nitz</div><div class='hide'><a href='https://www.instagram.com/alex_draw_for_life/'><img class='instagram' src='mango.png'></a> </img><a href='https://www.instagram.com/serjant_alex/'><img class='instagram' src='serjant.png'> </img></a></div><div class='filler'></div>",
+      "<i>Del 2 - I vilket ett tåg anländer. </i><br><br><a href='https://youtu.be/jivn77ehYnI?si=wTd8XAk3KpzpucB0'>YouTube</a><br><br>"+
+      "Art by <div class='artLink' id='sig'>Alex P Nitz</div><div class='hide'><a href='https://www.instagram.com/alex_draw_for_life/'><img class='instagram' src='mango.png'></a> </img><a href='https://www.instagram.com/serjant_alex/'><img class='instagram' src='serjant.png'> </img></a></div><div class='filler'></div>,"+
+      "<i>Del 3 - I vilket tåget blir försenat. </i><br><br><a href='https://youtu.be/5Ze6K7BuxdY'>YouTube</a><br><br>"+
+      "Art by <div class='artLink' id='sig'>Alex P Nitz</div><div class='hide'><a href='https://www.instagram.com/alex_draw_for_life/'><img class='instagram' src='mango.png'></a> </img><a href='https://www.instagram.com/serjant_alex/'><img class='instagram' src='serjant.png'> </img></a></div><div class='filler'></div>" ,
+      "<i>Del 4 - I vilket molntumlarna och eldörnarna återvänder till Drogomeda, även om vi inte pratar om det så mycket. </i><br><br><a href='https://youtu.be/sDCEClPHR08'>YouTube</a><br><br>"
+      ];
+    /*_.~"~._.~"~._.~"~._.~"~.__.~"~._.~"~._.~"~._.~"~.__.~"~._.~"~._.~"~._.~"~.__.~"~._.~"~._.~"~._.~"~.__.~"~._.~"~._.~"~._.~"~.__.~"~._.~"~._.~"~._.~"~._*/
+
+    var episodeTitleArray = [episodeTitles1, episodeTitles2, episodeTitles3, episodeTitles4, episodeTitles5, episodeTitles6, episodeTitles7,episodeTitles8];
+    var playlistArray = [playlist1, playlist2, playlist3, playlist4, playlist5, playlist6, playlist7,playlist8];
+    let episodeDescriptionArray = [episodeDescriptions1, episodeDescriptions2, episodeDescriptions3, episodeDescriptions4, episodeDescriptions5, 
+    episodeDescriptions6, episodeDescriptions7,episodeDescriptions8];
+
+    let imageArray = [
+      "https://gnyrftacode.se/ring.png",
+      "https://gnyrftacode.se/tophat.png",
+      "https://gnyrftacode.se/island.png",
+      "https://gnyrftacode.se/berattelsebollar.png",
+      "https://gnyrftacode.se/frygold_o_frygla.png",
+      "https://gnyrftacode.se/bro.png",
+      "https://gnyrftacode.se/gnyrfta.png",
+      "https://gnyrftacode.se/akisha_1.jpg"];
+      let imageArray2 = [
+      "https://gnyrftacode.se/ring.png",
+      "https://gnyrftacode.se/tophat.png",
+      "https://gnyrftacode.se/island.png",
+      "https://gnyrftacode.se/berattelsebollar.png",
+      "https://gnyrftacode.se/frygold_o_frygla.png",
+      "https://gnyrftacode.se/bro.png",
+      "https://gnyrftacode.se/gnyrfta.png",
+      "https://gnyrftacode.se/svamp2.jpg"
+      ]
+      let imageArray3 = [
+      "https://gnyrftacode.se/ring.png",
+      "https://gnyrftacode.se/tophat.png",
+      "https://gnyrftacode.se/island.png",
+      "https://gnyrftacode.se/berattelsebollar.png",
+      "https://gnyrftacode.se/frygold_o_frygla.png",
+      "https://gnyrftacode.se/bro.png",
+      "https://gnyrftacode.se/gnyrfta.png",
+      "https://gnyrftacode.se/svamp1.png"
+      ]
+      let imageArray4 = [
+      "https://gnyrftacode.se/ring.png",
+      "https://gnyrftacode.se/tophat.png",
+      "https://gnyrftacode.se/island.png",
+      "https://gnyrftacode.se/berattelsebollar.png",
+      "https://gnyrftacode.se/frygold_o_frygla.png",
+      "https://gnyrftacode.se/bro.png",
+      "https://gnyrftacode.se/gnyrfta.png",
+      "https://gnyrftacode.se/svamp1.png"
+      ]
+    /*.-~-.-~-.-~.-~-.-~-.-~.-~-.-~-.-~.-~-.-~-.-~.-~-.-~-.-~.-~-.-~-.-~.-~-.-~-.-~.-~-.-~-.-~.-~-.-~-.-~.-~-.-~-.-~.-~-.-~-.-~.-~-.-~-.-~*/
+    /*End of initializations*/
+    /*.-~-.-~-.-~.-~-.-~-.-~.-~-.-~-.-~.-~-.-~-.-~.-~-.-~-.-~.-~-.-~-.-~.-~-.-~-.-~.-~-.-~-.-~.-~-.-~-.-~.-~-.-~-.-~.-~-.-~-.-~.-~-.-~-.-~*/
+     //Global variables: 
+    var episodeNumber;
+    var currentEpisodeTitles = [];
+    var currentEpisodeDescriptions = [];
+    var currentPlayList = [];
+    var currentImage = [];
+    var dropDownString = "";
+    var nextsrc = [];
+    var currentStoryNumber;
+    function myFunction() {
+      var x = document.getElementById("myLinks");
+      if (x.style.display === "block") {
+        x.style.display = "none";
+      } else {
+        x.style.display = "block";
+      }
+    }
+    function displayInfo() {
+      document.getElementById("image1_1").src = "https://gnyrftacode.se/ring.png"
+      document.getElementById("changingContent").style.visibility = "hidden";
+      //Set to empty source in case someone clicks the player by mistake when it is hidden: 
+      document.getElementById("player").src = "";
+      document.getElementById("title").innerText = "Spellistor";
+      document.getElementById("omSidan").innerText = "Hej! Välj spellista från menyn uppe till höger.";
+      document.getElementById("omSidan").style.visibility = "visible";
+    }
+    function displayStory(a) {
+      console.log("In display story");
+      currentStoryNumber=a;
+      episodeNumber = 0;
+      document.getElementById("changingContent").style.visibility = "visible";
+      document.getElementById("omSidan").style.visibility = "hidden";
+      document.getElementById("myLinks").style.display = "none";
+      currentPlayList = playlistArray[a];
+      currentEpisodeTitles = episodeTitleArray[a];
+      currentImage = imageArray[a];
+      currentEpisodeDescriptions = episodeDescriptionArray[a];
+      //Set image: 
+      document.getElementById("image1_1").src = currentImage;
+      //Set title:
+      document.getElementById("title").innerText = storyTitles[a];
+      //Set Description: 
+      document.getElementById("episodeDescription").innerHTML = currentEpisodeDescriptions[episodeNumber];
+      //Set Dropdown menu items
+      dropDownString="";
+      currentPlayList.forEach((item, index) => { dropDownString += `<option value="${index}">${currentEpisodeTitles[index]}` })
+      document.getElementById("episodes").innerHTML = dropDownString;
+      //Set Audio src, src-playlist and reload.
+      Player.pause();
+      document.getElementById("player").src = currentPlayList[0];
+      nextsrc = currentPlayList;
+      document.getElementById("player").load();
+    }
+    //HERE GOES INITIALIZATION SCRIPT THAT HAS DIFFERENT VALUES FOR EACH STORY ARC.
+   // document.getElementById("image1_1").src=imageArray[0];
+  </script>
+  <div class="topnav">
+    <a href="#home" class="active"></a>
+    <!-- Navigation links (hidden by default) -->
+    <div id="myLinks">
+      <a href="denji_anji.html" >Sagan om Denji och Anji och ringarna</a>
+      <a href="#test1" onclick="displayStory(1)">Sagan om en blåsig dag i ett land utan cirklar</a>
+      <a href="#test2" onclick="displayStory(2)">Sagan om Frygold och Frygla på Island</a>
+      <a href="#test3" onclick="displayStory(3)">Berättelsebollar</a>
+      <a href="#test4" onclick="displayStory(4)">Frygolds och Fryglas resa</a>
+      <a href="#test5" onclick="displayStory(5)">En gång i tiden i New York</a>
+      <a href="#test6" onclick="displayStory(6)">Gnyrfta</a>
+      <a href="#test7" onclick="displayStory(7)">Fyra vänners resa genom tid och rum</a>
+    </div>
+    <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+
+  <div id="image1">
+    <img id="image1_1" src="https://gnyrftacode.se/ring.png">
+  </div>
+
+  <h1 id="title">Spellistor</h1>
+  <div id="omSidan">Hej! Välj spellista från menyn uppe till höger. Denji Anji.</div>
+  <div id="changingContent">
+
+
+    <div id="playerAndContent">
+      <div id="instructionsAndChooser">
+        <label for=" episodes" id="instructions"></label>
+
+        <select name="episodes" id="episodes">
+          <option id="episode1" value="0">Ep 1</option>
+          <option id="episode2" value="1">Ep 2</option>
+          <option id="episode3" value="2">Ep 3</option>
+          <option id="episode3" value="3">Ep 4</option>
+          <option id="episode4" value="4">Ep 5</option>
+          <option id="episode5" value="5">Ep 6</option>
+          <option id="episode6" value="6">Ep 7</option>
+          <option id="episode7" value="7">Ep 8</option>
+          <option id="episode8" value="8">Ep 9</option>
+        </select>
+        <button id="selectButton" onclick="selectNum()">Välj markerad</button>
+      </div>
+      <br>
+      <br>
+      <audio controls id="player" src="https://gnyrftacode.se/del_1_pa_svenska.mp3">
+        <source type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+      <div id="now_playing"></div>
+      <div id="episodeDescription"></div>
+
+      <script type='text/javascript'>
+        //  var episodeNumber=0;
+
+        function selectNum() {
+          episodeNumber = document.getElementById("episodes").value;
+          document.getElementById("episodeDescription").innerHTML = currentEpisodeDescriptions[episodeNumber];
+          switch(episodeNumber) {
+            case "0": currentImage = imageArray[currentStoryNumber];break;
+            case "1": currentImage = imageArray2[currentStoryNumber];break;
+            case "2": currentImage = imageArray3[currentStoryNumber];break;
+            case "3": currentImage = imageArray4[currentStoryNumber];break;
+            case "4": currentImage = imageArray[currentStoryNumber];break;
+            case "5": currentImage = imageArray[currentStoryNumber];break;
+            case "6": currentImage = imageArray[currentStoryNumber];break;
+            case "7": currentImage = imageArray[currentStoryNumber];break;
+            case "8": currentImage = imageArray[currentStoryNumber];break;
+            case "9": currentImage = imageArray[currentStoryNumber];break;
+            case "10": currentImage = imageArray[currentStoryNumber];break;
+          }
+          console.log(episodeNumber);
+          console.log("Current image: "+currentImage);
+          document.getElementById("image1_1").src = currentImage;
+          // document.getElementById("now_playing").innerText="Now playing: "+nextsrc[episodeNumber];
+          Player.src = nextsrc[episodeNumber];
+          Player.pause();
+         // document.getElementById("episode"+episodeNumber).setAttribute("selected","true");
+        }
+
+
+        var Player = document.getElementById('player');
+
+
+
+        Player.onended = function () {
+          /*If used postfix, with operator after operand (for example, x++), the increment operator increments and returns the value before incrementing.
+          If used prefix, with operator before operand (for example, ++x), the increment operator increments and returns the value after incrementing.
+          */
+
+          if (++episodeNumber < nextsrc.length) {
+            // document.getElementById("now_playing").innerText="Spelar: "+nextsrc[episodeNumber-1];   
+            document.getElementById("episodeDescription").innerHTML = currentEpisodeDescriptions[episodeNumber];
+            Player.src = nextsrc[episodeNumber]; Player.play();
+            document.getElementById("episodes").options[episodeNumber].selected = true;
+            switch(episodeNumber) {
+            case 0: currentImage = imageArray[currentStoryNumber];break;
+            case 1: currentImage = imageArray2[currentStoryNumber];break;
+            case 2: currentImage = imageArray3[currentStoryNumber];break;
+            case 3: currentImage = imageArray[currentStoryNumber];break;
+            case 4: currentImage = imageArray[currentStoryNumber];break;
+            case 5: currentImage = imageArray[currentStoryNumber];break;
+            case 6: currentImage = imageArray[currentStoryNumber];break;
+            case 7: currentImage = imageArray[currentStoryNumber];break;
+            case 8: currentImage = imageArray[currentStoryNumber];break;
+            case 9: currentImage = imageArray[currentStoryNumber];break;
+            case 10: currentImage = imageArray[currentStoryNumber];break;
+          }
+          console.log(episodeNumber);
+          console.log("Current image: "+currentImage);
+          document.getElementById("image1_1").src = currentImage;
+          }
+          else {
+            Player.pause();
+          }
+        }
+      </script>
+    </div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,5 @@
+* Continue here
+- [X]  npm start
+- [X] create package.json
+- [X] Test linking different divs. Did not work.
+
