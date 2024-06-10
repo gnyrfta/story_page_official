@@ -2,7 +2,7 @@
   "name": "story_page_official",
   "version": "1.0.0",
   "description": "",
-  "main": "spellistor.html",
+  "main": "index.html",
   "scripts": {
     "start": "http-server"
   },

@@ -291,7 +291,7 @@
       }
     }
     function displayInfo() {
-      document.getElementById("image1_1").src = "https://gnyrftacode.se/ring.png"
+      document.getElementById("image1_1").src = "https://gnyrftacode.se/test1.jpg"
       document.getElementById("changingContent").style.visibility = "hidden";
       //Set to empty source in case someone clicks the player by mistake when it is hidden: 
       document.getElementById("player").src = "";
@@ -325,9 +325,7 @@
       document.getElementById("player").src = currentPlayList[0];
       nextsrc = currentPlayList;
       document.getElementById("player").load();
-    }
-    //HERE GOES INITIALIZATION SCRIPT THAT HAS DIFFERENT VALUES FOR EACH STORY ARC.
-   // document.getElementById("image1_1").src=imageArray[0];
+    } 
   </script>
   <div class="topnav">
     <a href="#home" class="active"></a>
@@ -349,27 +347,28 @@
   </div>
 
   <div id="image1">
-    <img id="image1_1" src="https://gnyrftacode.se/ring.png">
+    <img id="image1_1" src="https://newsvoice.se/wp-content/uploads/2016/08/SVT-pausbild-TV-800x600.jpg">
   </div>
 
   <h1 id="title">Spellistor</h1>
-  <div id="omSidan">Hej! Välj spellista från menyn uppe till höger. Denji Anji.</div>
+  <div id="omSidan">Hej! Välj spellista från menyn uppe till höger.</div>
   <div id="changingContent">
 
 
     <div id="playerAndContent">
       <div id="instructionsAndChooser">
-        <label for=" episodes" id="instructions"></label>	
+        <label for=" episodes" id="instructions"></label>
+
         <select name="episodes" id="episodes">
-          <option id="episode1" value="0">Under en gata i Toronto</option>
-          <option id="episode2" value="1">Man är vad maneter?</option>
-          <option id="episode3" value="2">Segelbåtspojken och ponnyflckan</option>
-          <option id="episode3" value="3">Toyookas Ringar</option>
-          <option id="episode4" value="4">Den stålgråögde rånaren på ROM</option>
-          <option id="episode5" value="5">En allergisk reaktion</option>
-          <option id="episode6" value="6">Underjorden</option>
-          <option id="episode7" value="7">Prövningar</option>
-          <option id="episode8" value="8">Aqua, vi bor i ett akvarium!</option>
+          <option id="episode1" value="0">Ep 1</option>
+          <option id="episode2" value="1">Ep 2</option>
+          <option id="episode3" value="2">Ep 3</option>
+          <option id="episode3" value="3">Ep 4</option>
+          <option id="episode4" value="4">Ep 5</option>
+          <option id="episode5" value="5">Ep 6</option>
+          <option id="episode6" value="6">Ep 7</option>
+          <option id="episode7" value="7">Ep 8</option>
+          <option id="episode8" value="8">Ep 9</option>
         </select>
         <button id="selectButton" onclick="selectNum()">Välj markerad</button>
       </div>
