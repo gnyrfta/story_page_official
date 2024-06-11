@@ -301,7 +301,7 @@
     }
     function displayStory(a) {
       console.log("In display story");
-      currentStoryNumber=a;
+      currentStoryNumber=0;//Denji Anji is story zero.
       episodeNumber = 0;
       document.getElementById("changingContent").style.visibility = "visible";
       document.getElementById("omSidan").style.visibility = "hidden";
@@ -387,7 +387,8 @@
 
         function selectNum() {
           episodeNumber = document.getElementById("episodes").value;
-          document.getElementById("episodeDescription").innerHTML = currentEpisodeDescriptions[episodeNumber];
+            document.getElementById("episodeDescription").innerHTML = currentEpisodeDescriptions[episodeNumber];
+	    currentStoryNumber=0;
           switch(episodeNumber) {
             case "0": currentImage = imageArray[currentStoryNumber];break;
             case "1": currentImage = imageArray2[currentStoryNumber];break;
